@@ -1,3 +1,7 @@
+### Assignment Complettion
+
+As part of project 2 assignment, I completed and uploaded the code to GITHUB repository
+
 ### Introduction
 
 This second programming assignment will require you to write an R

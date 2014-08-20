@@ -57,7 +57,7 @@ cacheSolve <- function(x) {
         ## Using cache if the matrix is unchanged and a cache already exist
         
         if(inverseFlag==TRUE && identical(originalMatrix, data) ==TRUE ) {
-                message("getting cached data")
+                message("Providing inverse matrix from cache")
                 return(inverseMatrix)     ## Return the inverse matrix from Cache
         }
         
