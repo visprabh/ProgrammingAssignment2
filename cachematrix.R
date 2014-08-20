@@ -3,10 +3,11 @@
 ## Description: 
 ##              Intent of the code is compute Inverse of a matrix and cache it. 
 ##              Make use of the cache if the same matrix is passed again for inverse computation
+##              Assumption: Only square invertible matrix is passed as input parameter
 
 
 ## makeCacheMatrix(x):: 
-##      This function creates a special "matrix" object that can cache its inverse.
+##      This function creates a special "matrix" object that can cache it's inverse.
 ##      It takes square invertible matrix as input parameter
 
 makeCacheMatrix <- function(x=matrix()) {
@@ -24,13 +25,13 @@ makeCacheMatrix <- function(x=matrix()) {
         ## function to get matrix which needs to be inversed
         getMatrix <- function() x
         
-        ##function to set and chache inverse matrix, also set the inverse flag to TRUE
+        ##function to set and cache inverse matrix, also set the inverse flag to TRUE
         setInverse <- function(invOfx) {
                 inverseMatrix<<-invOfx
                 inverseFlag<<-TRUE
         }
         
-        ## Fucntion to return inverse of the matrix
+        ## Function to return inverse of the matrix
         getInverse <- function() inverseMatrix
         
         ## Function to return inverse flag, used to check if cache can be used or not
@@ -54,7 +55,7 @@ cacheSolve <- function(x) {
         originalMatrix <- x$getOriginalMatrix()
         data <- x$getMatrix()
         
-        ## Using cache if the matrix is unchanged and a cache already exist
+        ## Using cache if the matrix is unchanged and a cache already exists
         
         if(inverseFlag==TRUE && identical(originalMatrix, data) ==TRUE ) {
                 message("Providing inverse matrix from cache")

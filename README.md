@@ -1,4 +1,4 @@
-### Assignment Complettion
+### Assignment Completion
 
 As part of project 2 assignment, I completed and uploaded the code to GITHUB repository
 
